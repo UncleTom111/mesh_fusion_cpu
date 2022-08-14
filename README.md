@@ -23,7 +23,7 @@ sudo apt-get install libglew-dev
 ```
 ### Install *cmake*
 ```
-sudo apt  install cmake
+sudo apt install cmake
 ```
 ### Install *cython*, *h5py*, *scipy*
 ```
