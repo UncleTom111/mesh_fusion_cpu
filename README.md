@@ -64,13 +64,16 @@ python setup.py build_ext --inplace
 cd ..
 ```
 ### Modify *mesh_fusion*
-!!!! The name of  generated ```.so``` files are various in different PC and environment. !!!!
-- Step 1 -- find thsese ```.so``` files under directories ***librender*** and ***libfusioncpu***
-- Step 2 -- change the file name below according to the ```.so``` files you found
+In order to import ```librender```, ```libfusion```, ```libmcubes``` in ```2_fusion.py``` conveniently, we need to modify this repository a little bit.
+
+!!!! The name of  generated ```.so``` files are various in different PC system and environment. !!!!
+- Step 1 -- find thsese ```.so``` files under directories ***librender***, ***libmcubes*** and ***libfusioncpu***
+- Step 2 -- change the file name below according to the ```.so``` files you have found
 - example: ```pyrender.cpython-38-x86_64-linux-gnu.so```
 ```
 cp -i ./librender/pyrender.cpython-37m-x86_64-linux-gnu.so ./pyrender.so
 cp -i ./libfusioncpu/cyfusion.cpython-37m-x86_64-linux-gnu.so ./cyfusion.so
+cp -i ./libmcubes/mcubes.cpython-37m-x86_64-linux-gnu.so ./mcubes.so
 ```
 ## Step 3 --  Run mesh_fusion (demo)
 ### Scale an Object
